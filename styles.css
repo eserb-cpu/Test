@@ -11,20 +11,21 @@ body {
 
 h1 {
   margin-bottom: 10px;
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .trash-can {
   margin-bottom: 0;
-  position: relative;
+  position: absolute;
+  bottom: 100px;
 }
 
 #fillLevelPercentage {
-  font-size: 2em;
+  font-size: 4em;
   font-weight: bold;
   margin: 0;
   position: absolute;
-  bottom: -45px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
 }
