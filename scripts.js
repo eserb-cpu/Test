@@ -21,7 +21,7 @@ async function getFillLevel() {
 }
 
 async function updateFillLevelDisplay() {
-  const fillLevel = getFillLevel();
+  const fillLevel = 42;
   const fillLevelRect = document.getElementById("fillLevelRect");
   const fillLevelPercentage = document.getElementById("fillLevelPercentage");
 
