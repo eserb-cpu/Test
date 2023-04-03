@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 4em;
+}
+
+.trash-can {
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 100px;
+}
+
+#fillLevelPercentage {
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+

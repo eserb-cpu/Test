@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Bin Fill Level</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Waste Bin Fill Level</h1>
+    <div class="trash-can">
+      <svg width="600" height="750" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <rect class="fill-level" x="16" y="16" width="32" height="0" fill="#4caf50" id="fillLevelRect"/>
+          <path d="M 14 16 L 50 16 L 50 10 L 14 10 Z" stroke="black" stroke-width="1.5" fill="none"/>
+          <path d="M 16 16 L 48 16 L 48 48 L 16 48 Z" stroke="black" stroke-width="1.5" fill="none"/>
+          <path d="M 20 10 L 24 5 L 40 5 L 44 10" stroke="black" stroke-width="1.5" fill="none"/>
+          <line x1="32" y1="24" x2="32" y2="40" stroke="black" stroke-width="1"/>
+          <line x1="26" y1="24" x2="26" y2="40" stroke="black" stroke-width="1"/>
+          <line x1="38" y1="24" x2="38" y2="40" stroke="black" stroke-width="1"/>
+        </g>
+      </svg>
+      <p id="fillLevelPercentage">0%</p>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
