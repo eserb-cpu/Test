@@ -1,20 +1,26 @@
-// Placeholder
-function getFillLevel() {
-  // Replace CHANNEL_ID with your ThingSpeak Channel ID
-  var url = 'https://api.thingspeak.com/channels/2092743/feeds.json?results=1';
+// Replace with your ThingSpeak channel ID and read API key
+const CHANNEL_ID = '2092743';
+const READ_API_KEY = '2ZKCYCOZ0BH68HI4';
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      var distance = data.feeds[0].field1;
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
-    return distance;
+async function getFillLevel() {
+  const url = `https://api.thingspeak.com/channels/${2092743}/fields/1/last?api_key=${2ZKCYCOZ0BH68HI4}`;
+  
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    
+    const fillLevel = await response.text();
+    return parseInt(fillLevel, 10);
+  } catch (error) {
+    console.error('Error fetching fill level:', error);
+    return null;
+  }
 }
 
-function updateFillLevelDisplay() {
+async function updateFillLevelDisplay() {
   const fillLevel = getFillLevel();
   const fillLevelRect = document.getElementById("fillLevelRect");
   const fillLevelPercentage = document.getElementById("fillLevelPercentage");
