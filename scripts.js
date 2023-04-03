@@ -1,7 +1,17 @@
 // Placeholder
 function getFillLevel() {
-  // Generate a random number
-  return Math.floor(Math.random() * 101);
+  // Replace CHANNEL_ID with your ThingSpeak Channel ID
+  var url = 'https://api.thingspeak.com/channels/2092743/feeds.json?results=1';
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      var distance = data.feeds[0].field1;
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+    return distance;
 }
 
 function updateFillLevelDisplay() {
