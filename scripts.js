@@ -8,8 +8,8 @@ async function getFillLevel() {
   return parseInt(fillLevel, 10);
 }
 
-function updateFillLevelDisplay() {
-  const fillLevel = getFillLevel();
+async function updateFillLevelDisplay() {
+  const fillLevel = await getFillLevel();
   const fillLevelRect = document.getElementById("fillLevelRect");
   const fillLevelPercentage = document.getElementById("fillLevelPercentage");
 
