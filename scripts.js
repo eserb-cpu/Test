@@ -2,21 +2,10 @@ const CHANNEL_ID = '2092743';
 const READ_API_KEY = '2ZKCYCOZ0BH68HI4';
 
 async function getFillLevel() {
-  const url = `https://api.thingspeak.com/channels/${CHANNEL_ID}/fields/1/last?api_key=${READ_API_KEY}`;
-  
-  try {
-    const response = await fetch(url);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    
-    const fillLevel = await response.text();
-    return parseInt(fillLevel, 10);
-  } catch (error) {
-    console.error('Error fetching fill level:', error);
-    return null;
-  }
+  const url = `https://api.thingspeak.com/channels/CHANNEL_ID/fields/1/last?api_key=READ_API_KEY`;
+  const response = await fetch(url);
+  const fillLevel = await response.text();
+  return parseInt(fillLevel, 10);
 }
 
 function updateFillLevelDisplay() {
