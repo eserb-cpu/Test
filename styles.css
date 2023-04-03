@@ -16,8 +16,7 @@ h1 {
 
 .trash-can {
   margin-bottom: 0;
-  position: absolute;
-  bottom: 100px;
+  position: relative;
 }
 
 #fillLevelPercentage {
