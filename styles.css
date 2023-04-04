@@ -24,7 +24,7 @@ h1 {
   font-weight: bold;
   margin: 0;
   position: absolute;
-  bottom: -40px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
